@@ -1,0 +1,21 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: nie
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+  mvc:
+    static-path-pattern: /static/**
+  datasource:
+    druid:
+      username: scott
+      password: 123456
+      driver-class-name: oracle.jdbc.OracleDriver
+      url: jdbc:oracle:thin:@192.168.172.3:1521:orcl
+mybatis:
+  type-aliases-package: com.niehao.model
+  mapper-locations: classpath:mapper/*Mapper.xml
+  configuration:
+    map-underscore-to-camel-case: true
